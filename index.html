@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>윤하린 포트폴리오</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">HARIN YOON</a>
+      <nav class="nav-links" aria-label="Portfolio navigation">
+        <a href="#work">작업</a>
+        <a href="#profile">소개</a>
+        <a href="#contact">연락</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="carousel-section page-fade" id="home">
+        <div class="carousel-sticky">
+          <div class="hero-copy fade-step">
+            <p class="eyebrow">Brand Identity / UXUI / Campaign</p>
+            <h1>윤하린 포트폴리오</h1>
+            <p class="hero-description">
+              한국 브랜드의 톤과 사용 경험을 새롭게 정리하는 그래픽 디자이너입니다.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#work">작업 보기</a>
+              <a class="button ghost" href="#profile">소개</a>
+            </div>
+          </div>
+
+          <div class="carousel-wrap fade-step" aria-label="Scroll controlled portfolio carousel">
+            <div class="carousel-scene">
+              <div class="carousel-ring" id="carouselRing">
+                <article class="orbit-card">
+                  <img src="assets/oliveyoung-renewal.svg" alt="올리브영 UXUI 리뉴얼 컨셉 작업 이미지">
+                  <div><span>01</span><strong>올리브영 UXUI 리뉴얼</strong><small>뷰티 리테일</small></div>
+                </article>
+                <article class="orbit-card">
+                  <img src="assets/musinsa-campaign.svg" alt="무신사 시즌 캠페인 디자인 작업 이미지">
+                  <div><span>02</span><strong>무신사 시즌 캠페인</strong><small>패션 에디토리얼</small></div>
+                </article>
+                <article class="orbit-card">
+                  <img src="assets/tamburins-pop.svg" alt="탬버린즈 팝업 스토어 아이덴티티 작업 이미지">
+                  <div><span>03</span><strong>탬버린즈 팝업 아이덴티티</strong><small>공간 브랜딩</small></div>
+                </article>
+                <article class="orbit-card">
+                  <img src="assets/gentlemonster-ui.svg" alt="젠틀몬스터 디지털 룩북 작업 이미지">
+                  <div><span>04</span><strong>젠틀몬스터 디지털 룩북</strong><small>웹 디자인</small></div>
+                </article>
+                <article class="orbit-card">
+                  <img src="assets/kakao-gift.svg" alt="카카오 선물하기 UX 개선 작업 이미지">
+                  <div><span>05</span><strong>카카오 선물하기 UX</strong><small>모바일 서비스</small></div>
+                </article>
+                <article class="orbit-card">
+                  <img src="assets/lotteworld-festival.svg" alt="롯데월드 페스티벌 그래픽 아이덴티티 작업 이미지">
+                  <div><span>06</span><strong>롯데월드 페스티벌 그래픽</strong><small>캠페인 그래픽</small></div>
+                </article>
+              </div>
+            </div>
+            <div class="scroll-ui">
+              <span>스크롤해서 작업 보기</span>
+              <div class="scroll-progress"><i id="carouselProgress"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro panel reveal-group" id="profile">
+        <div class="section-heading reveal-item">
+          <p class="eyebrow">Designer Profile</p>
+          <h2>브랜드의 성격을 화면과 그래픽 시스템으로 번역합니다.</h2>
+        </div>
+        <div class="intro-grid">
+          <p class="lead reveal-item">
+            윤하린은 브랜드 리서치, 컬러 시스템, 타이포그래피, 모바일 화면 설계를 연결해
+            실제 캠페인과 서비스에 적용 가능한 디자인 결과물을 만듭니다.
+          </p>
+          <div class="stats reveal-item" aria-label="Portfolio summary">
+            <div><strong>24</strong><span>선정 프로젝트</span></div>
+            <div><strong>06</strong><span>브랜드 시스템</span></div>
+            <div><strong>12</strong><span>캠페인 그래픽</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section reveal-group" id="work">
+        <div class="section-heading reveal-item">
+          <p class="eyebrow">Selected Work</p>
+          <h2>한국 브랜드를 위한 가상의 리디자인 프로젝트</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal-item">
+            <img src="assets/oliveyoung-renewal.svg" alt="올리브영 UXUI 리뉴얼 컨셉 작업 이미지">
+            <div class="project-copy">
+              <span>UXUI 리뉴얼</span>
+              <h3>올리브영 앱 리뉴얼 컨셉</h3>
+              <p>뷰티 카테고리 탐색, 추천 카드, 이벤트 배너를 하나의 그린 아이덴티티로 정리한 모바일 리디자인입니다.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal-item">
+            <img src="assets/musinsa-campaign.svg" alt="무신사 시즌 캠페인 디자인 작업 이미지">
+            <div class="project-copy">
+              <span>캠페인 디자인</span>
+              <h3>무신사 시즌 에디토리얼</h3>
+              <p>패션 플랫폼의 시즌 기획전을 모바일 배너, 룩북, SNS 카드로 확장한 캠페인 그래픽 작업입니다.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal-item">
+            <img src="assets/tamburins-pop.svg" alt="탬버린즈 팝업 스토어 아이덴티티 작업 이미지">
+            <div class="project-copy">
+              <span>공간 브랜딩</span>
+              <h3>탬버린즈 팝업 아이덴티티</h3>
+              <p>향과 오브제의 분위기를 포스터, 공간 사인, 온라인 초대장으로 연결한 팝업 브랜딩 컨셉입니다.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process-section reveal-group">
+        <div class="section-heading reveal-item">
+          <p class="eyebrow">Design Process</p>
+          <h2>리서치에서 실제 적용 화면까지</h2>
+        </div>
+
+        <div class="process-list">
+          <article class="process-step reveal-item">
+            <span>01</span>
+            <h3>리서치</h3>
+            <p>브랜드의 기존 톤, 경쟁 서비스, 사용자 흐름을 살펴보고 개선 방향을 정리합니다.</p>
+          </article>
+          <article class="process-step reveal-item">
+            <span>02</span>
+            <h3>디렉션</h3>
+            <p>컬러, 타이포그래피, 이미지 톤, 그리드 규칙을 하나의 디자인 언어로 정리합니다.</p>
+          </article>
+          <article class="process-step reveal-item">
+            <span>03</span>
+            <h3>적용</h3>
+            <p>앱 화면, 배너, 포스터, SNS 카드 등 실제 사용되는 매체로 확장합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section reveal-group" id="contact">
+        <div class="contact-copy reveal-item">
+          <p class="eyebrow">Contact</p>
+          <h2>브랜드를 더 선명하게 보여줄 디자인을 제안합니다.</h2>
+          <p>브랜드 리디자인, 모바일 UXUI, 캠페인 그래픽, 전시 포트폴리오 웹 제작을 함께 진행할 수 있습니다.</p>
+        </div>
+        <a class="contact-link reveal-item" href="mailto:hello@harinyoon.kr">hello@harinyoon.kr</a>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+  <script src="script.js?v=9"></script>
+</body>
+</html>

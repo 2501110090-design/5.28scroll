@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Gentle Monster digital lookbook portfolio mockup</title>
+  <desc id="desc">A minimal digital lookbook concept for a Korean eyewear brand.</desc>
+  <rect width="800" height="600" fill="#e9edf1"/>
+  <rect x="86" y="76" width="628" height="448" rx="28" fill="#fff"/>
+  <rect x="118" y="112" width="564" height="264" rx="20" fill="#1d232b"/>
+  <circle cx="292" cy="244" r="72" fill="none" stroke="#d9dee5" stroke-width="18"/>
+  <circle cx="500" cy="244" r="72" fill="none" stroke="#d9dee5" stroke-width="18"/>
+  <rect x="360" y="234" width="72" height="16" rx="8" fill="#d9dee5"/>
+  <text x="118" y="438" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#1d232b">GENTLE MONSTER</text>
+  <rect x="118" y="464" width="160" height="16" rx="8" fill="#9ca7b4"/>
+  <rect x="118" y="492" width="250" height="16" rx="8" fill="#c6ccd4"/>
+  <rect x="538" y="416" width="144" height="72" rx="36" fill="#1d232b"/>
+  <text x="574" y="460" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">LOOKBOOK</text>
+</svg>
