@@ -1,14 +1,15 @@
 :root {
-  --ink: #181714;
-  --muted: #66635b;
-  --paper: #f7f2e8;
-  --cream: #fffaf0;
-  --line: rgba(24, 23, 20, 0.16);
-  --sage: #859179;
-  --coral: #d96d58;
-  --blue: #526d8e;
-  --gold: #c2a257;
-  --shadow: 0 24px 70px rgba(32, 29, 24, 0.16);
+  --ink: #171614;
+  --muted: #69645e;
+  --paper: #f8f3ea;
+  --cream: #fffdf7;
+  --line: rgba(23, 22, 20, 0.13);
+  --sage: #738a78;
+  --coral: #d96856;
+  --blue: #486b8d;
+  --gold: #bd9a45;
+  --rose: #f0c7bf;
+  --shadow: 0 26px 80px rgba(43, 35, 28, 0.16);
   --orbit-card-w: clamp(360px, 40vw, 560px);
   --orbit-card-h: calc(var(--orbit-card-w) * 0.75);
   --orbit-radius: clamp(300px, 28vw, 390px);
@@ -26,11 +27,12 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(90deg, rgba(24, 23, 20, 0.055) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(24, 23, 20, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 22, 20, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(23, 22, 20, 0.04) 1px, transparent 1px),
     var(--paper);
   background-size: 48px 48px;
   font-family: "Noto Sans KR", Arial, sans-serif;
+  text-rendering: geometricPrecision;
 }
 
 body::before {
@@ -40,8 +42,9 @@ body::before {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(135deg, rgba(133, 145, 121, 0.18), transparent 34%),
-    linear-gradient(315deg, rgba(217, 109, 88, 0.16), transparent 38%);
+    linear-gradient(125deg, rgba(240, 199, 191, 0.38), transparent 34%),
+    linear-gradient(240deg, rgba(115, 138, 120, 0.2), transparent 36%),
+    linear-gradient(12deg, rgba(72, 107, 141, 0.1), transparent 42%);
 }
 
 a {
@@ -68,13 +71,24 @@ img {
   justify-content: space-between;
   min-height: 76px;
   border-bottom: 1px solid var(--line);
-  background: rgba(247, 242, 232, 0.82);
-  backdrop-filter: blur(18px);
+  background: rgba(248, 243, 234, 0.78);
+  backdrop-filter: blur(22px) saturate(1.1);
 }
 
 .brand {
   font-weight: 900;
   letter-spacing: 0;
+  position: relative;
+}
+
+.brand::after {
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin-top: 5px;
+  border-radius: 999px;
+  background: var(--coral);
+  content: "";
 }
 
 .nav-links {
@@ -86,11 +100,30 @@ img {
 }
 
 .nav-links a {
+  position: relative;
   transition: color 180ms ease;
+}
+
+.nav-links a::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--coral);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
 }
 
 .nav-links a:hover {
   color: var(--ink);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
 }
 
 .hero {
@@ -187,7 +220,8 @@ img {
 
 .carousel-sticky h1 {
   font-size: clamp(54px, 7vw, 92px);
-  line-height: 0.92;
+  line-height: 0.94;
+  text-wrap: balance;
 }
 
 .hero-description {
@@ -216,20 +250,23 @@ img {
   border-radius: 999px;
   font-size: 14px;
   font-weight: 900;
-  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  box-shadow: 0 12px 28px rgba(43, 35, 28, 0.08);
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(43, 35, 28, 0.14);
 }
 
 .button.primary {
-  background: var(--ink);
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--ink), #3d352e);
   color: var(--cream);
 }
 
 .button.ghost {
-  background: rgba(255, 250, 240, 0.58);
+  background: rgba(255, 253, 247, 0.68);
 }
 
 .carousel-wrap {
@@ -269,8 +306,9 @@ img {
   margin-top: calc(var(--orbit-card-h) / -2);
   border: 1px solid rgba(24, 23, 20, 0.18);
   border-radius: 8px;
-  background: var(--cream);
+  background: rgba(255, 253, 247, 0.92);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
   backface-visibility: hidden;
   transform-style: preserve-3d;
   will-change: transform, filter, opacity;
@@ -287,7 +325,7 @@ img {
 .orbit-card img {
   height: 70%;
   object-fit: cover;
-  filter: saturate(0.92) contrast(1.02);
+  filter: saturate(0.98) contrast(1.04);
 }
 
 .orbit-card div {
@@ -323,7 +361,7 @@ img {
 
 .orbit-card.is-active {
   border-color: rgba(24, 23, 20, 0.32);
-  box-shadow: 0 28px 86px rgba(32, 29, 24, 0.24);
+  box-shadow: 0 30px 92px rgba(43, 35, 28, 0.24);
 }
 
 .scroll-ui {
@@ -354,7 +392,7 @@ img {
   width: 0%;
   height: 100%;
   border-radius: inherit;
-  background: var(--coral);
+  background: linear-gradient(90deg, var(--coral), var(--gold));
 }
 
 .panel,
@@ -393,6 +431,7 @@ img {
   font-size: clamp(20px, 2.4vw, 30px);
   line-height: 1.62;
   word-break: keep-all;
+  text-wrap: pretty;
 }
 
 .stats {
@@ -435,8 +474,15 @@ img {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 250, 240, 0.76);
+  background: rgba(255, 253, 247, 0.78);
   box-shadow: 0 16px 44px rgba(32, 29, 24, 0.08);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.project-card:hover {
+  border-color: rgba(23, 22, 20, 0.24);
+  box-shadow: 0 24px 62px rgba(43, 35, 28, 0.15);
+  transform: translateY(-6px);
 }
 
 .project-card img {
@@ -454,6 +500,7 @@ img {
   margin: 10px 0 12px;
   font-size: 24px;
   line-height: 1.2;
+  word-break: keep-all;
 }
 
 .project-copy p,
@@ -476,7 +523,8 @@ img {
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 250, 240, 0.5);
+  background: rgba(255, 253, 247, 0.58);
+  box-shadow: 0 14px 38px rgba(43, 35, 28, 0.06);
 }
 
 .process-step:nth-child(1) {
@@ -512,10 +560,16 @@ img {
   min-height: 58px;
   padding: 0 28px;
   border-radius: 999px;
-  background: var(--coral);
+  background: linear-gradient(135deg, var(--coral), #b95548);
   color: var(--cream);
   font-weight: 900;
   box-shadow: 0 18px 42px rgba(217, 109, 88, 0.28);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-link:hover {
+  box-shadow: 0 24px 54px rgba(217, 109, 88, 0.34);
+  transform: translateY(-2px);
 }
 
 .reveal-item {
